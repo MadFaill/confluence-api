@@ -1,7 +1,5 @@
-<?php namespace Outdare\Confluence
-
+<?php namespace Outdare\Confluence;
 use Log;
-
 class Client {
 
   private $host = null;
@@ -18,15 +16,55 @@ class Client {
 
   public function callGet($path)
   {
-    $uri = "https://".$host."".$path;
+    $uri = "https://".$this->host."".$path;
 
     $response = \Httpful\Request::get($uri)
-    ->authenticateWith($user, $pass)
+    ->authenticateWith($this->user, $this->pass)
+    ->expectsJson()
     ->send();
 
-    Log::info($response);
+    return $response;
   }
 
+  public function callPost($path,$jsonString)
+  {
+    $uri = "https://".$this->host."".$path;
+    Log::info("calling ".$uri." authed with ".$this->user." and ".$this->pass);
+    Log::info($jsonString);
+    $response = \Httpful\Request::post($uri)
+    ->authenticateWith($this->user, $this->pass)
+    ->sendsJson()
+    ->addHeader('User-Agent','Outdare Integration')
+    ->expectsJson()
+    ->body($jsonString)
+    ->send();
 
+    return $response;
+  }
+
+  public function callPut($path,$jsonString)
+  {
+    $uri = "https://".$this->host."".$path;
+
+    $response = \Httpful\Request::put($uri)
+    ->sendsJson()
+    ->authenticateWith($this->user, $this->pass)
+    ->expectsJson()
+    ->body($jsonString)
+    ->send();
+
+    return $response;
+  }
+
+  public function callDelete($path)
+  {
+    $uri = "https://".$this->host."".$path;
+
+    $response = \Httpful\Request::delete($uri)
+    ->authenticateWith($this->user, $this->pass)
+    ->send();
+
+    return $response;
+  }
 
 }
