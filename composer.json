@@ -13,10 +13,7 @@
     "autoload": {
         "psr-4": {
             "Outdare\\Confluence\\": "src/"
-        },
-        "files": [
-            "src/Http/helpers.php"
-        ]
+        }
     },
     "require": {
         "illuminate/support": "~5",
