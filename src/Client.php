@@ -20,6 +20,7 @@ class Client {
 
     $response = \Httpful\Request::get($uri)
     ->authenticateWith($this->user, $this->pass)
+    ->addHeader('User-Agent','Outdare Integration')
     ->expectsJson()
     ->send();
 
@@ -49,6 +50,7 @@ class Client {
     $response = \Httpful\Request::put($uri)
     ->sendsJson()
     ->authenticateWith($this->user, $this->pass)
+    ->addHeader('User-Agent','Outdare Integration')
     ->expectsJson()
     ->body($jsonString)
     ->send();
@@ -62,6 +64,7 @@ class Client {
 
     $response = \Httpful\Request::delete($uri)
     ->authenticateWith($this->user, $this->pass)
+    ->addHeader('User-Agent','Outdare Integration')
     ->send();
 
     return $response;
