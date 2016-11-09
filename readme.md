@@ -1,4 +1,4 @@
-# Attlassian Confluence PHP Client
+# Atlassian Confluence PHP Client
 
 ## Installation
 
