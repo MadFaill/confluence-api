@@ -1,6 +1,6 @@
 # Attlassian Confluence PHP Client
 
-## Instalation
+## Installation
 
 ```json
 "require": {
@@ -29,3 +29,7 @@ $space->create("SPACEKEY", "My new space","global", "It's my new space from API"
 $page = new \Outdare\Confluence\Page($client);
 $page->create("SPACEKEY", "My new page", "<p>Content for my page</p>");
 ```
+
+## Contributions
+
+Feel free to contribute with ideas and completing the todo.md file
