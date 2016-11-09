@@ -14,7 +14,7 @@
 ```php
 <?php
 $client = new \Outdare\Confluence\Client([
-  'hostname' => 'etdare.atlassian.net',
+  'hostname' => 'my.atlassian.net',
   'user' => '<user>',
   'pass' => '<pass>'
 ]);
