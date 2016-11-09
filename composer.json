@@ -1,0 +1,25 @@
+{
+    "name": "outdare/confluence-api",
+    "description": "Attlassian Confluence PHP Client Restfull API",
+    "keywords": ["attlassian", "confluence", "api","client"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Francisco Bruno Soares",
+            "email": "francisco.soares@outdare.pt",
+	    "homepage": "http://outdare.pt"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Outdare\\Confluence\\": "src/"
+        },
+        "files": [
+            "src/Http/helpers.php"
+        ]
+    },
+    "require": {
+        "illuminate/support": "~5",
+	"nategood/httpful": "*"
+    }
+}
