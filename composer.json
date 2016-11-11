@@ -2,7 +2,7 @@
     "name": "outdare/confluence-api",
     "description": "Attlassian Confluence PHP Client for Restfull API",
     "keywords": ["attlassian", "confluence", "api","client"],
-    "license": "MIT",
+    "license": "GNU",
     "authors": [
         {
             "name": "Francisco Bruno Soares",
