@@ -29,24 +29,9 @@ $space->create("SPACEKEY", "My new space", "global", "It's my new space from API
 $page = new \Outdare\Confluence\Page($client);
 $page->create("SPACEKEY", "My new page", "<p>Content for my page</p>");
 ```
-
-## Possible methods
-
-* Space
-  * ```$space->all(); ```
-  * ```$space->create($key,$name,$type,$description); ```
-  * ```$space->pages($spaceKey);```
-  * ```$space->pagesWithItems($spaceKey,$items);```
-* Page
-  * ```$page->search($title,$spaceKey)```
-  * ```$page->create($spaceKey,$title,$content);```
-  * ```$page->createChild($spaceKey,$parentPageId,$title,$content);```
-  * ```$page->update($pageId, $spaceKey, $title, $content, $version);```
-  * ```$page->delete($pageId)```
-
 ## With some help
 
-Thanks to Nate Good package ***nategood/httpful*** that makes the use of cUrl pretty simple.
+Thanks to Nate Good's package ***nategood/httpful*** that makes the use of cUrl pretty simple.
 http://phphttpclient.com/
 
 ## Contributions
