@@ -4,7 +4,7 @@
 
 ```json
 "require": {
-    "outdare/confluence-api":"dev-confluence-v1@dev"
+    "outdare/confluence-api":"1.0.1"
 },
 ```
 
